@@ -4,12 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard',
-    'prettier',
-    'plugin:react/jsx-runtime',
-  ],
+  extends: ['plugin:react/recommended', 'standard', 'prettier'],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -18,6 +13,11 @@ module.exports = {
   plugins: ['react'],
   rules: {
     indent: ['error'],
-    quotes: ['error', 'single', 'backtick'],
+    quotes: ['error', 'single', { allowTemplateLiterals: true }],
+    semi: ['error', 'never'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'no-unused-vars': 'warn',
   },
 }
