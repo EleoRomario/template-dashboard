@@ -3,7 +3,6 @@ import { Layout, Menu } from 'antd'
 import { sidebarData } from './data/sidebarData'
 
 const { Sider } = Layout
-const { Item } = Menu
 
 export const Sidebar = () => {
   return (
